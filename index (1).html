@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Website profil Sekolah Kristen Yahukimo untuk jenjang SMP dan SMA.">
+  <meta name="theme-color" content="#123b2d">
+  <title>Sekolah Kristen Yahukimo | SMP & SMA</title>
+  <style>
+    :root{--green:#123b2d;--green-2:#1f6246;--gold:#e6b85c;--cream:#f7f5ed;--ink:#18322a;--muted:#60736b;--white:#fff;--line:#dfe6dc;--red:#b44b42;--shadow:0 18px 45px rgba(18,59,45,.12)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth;scroll-padding-top:84px} body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif} a{color:inherit} img{max-width:100%;display:block} .container{width:min(1120px,calc(100% - 40px));margin-inline:auto}
+    .topline{height:5px;background:linear-gradient(90deg,var(--gold) 0 25%,var(--red) 25% 50%,var(--green-2) 50% 75%,#f4eee0 75%)}
+    header{position:sticky;top:0;z-index:20;background:rgba(247,245,237,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(18,59,45,.09)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}.brand-mark{width:46px;height:46px;display:grid;place-items:center;background:var(--green);color:white;border-radius:15px;font-size:22px;box-shadow:0 7px 18px rgba(18,59,45,.18)}.brand strong{display:block;font-size:15px;line-height:1.25;letter-spacing:.01em}.brand small{display:block;color:var(--muted);font-size:12px;margin-top:3px}.nav-links{display:flex;gap:24px;align-items:center}.nav-links a{text-decoration:none;color:#35564a;font-size:14px;font-weight:650}.nav-links a:hover{color:var(--red)}.menu-btn{display:none;border:1px solid var(--line);background:white;border-radius:10px;padding:9px 12px;font-size:18px;color:var(--green)}
+    .hero{position:relative;overflow:hidden;background:var(--green);color:white;padding:90px 0 84px}.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;pointer-events:none}.hero:before{width:560px;height:560px;right:-150px;top:-255px;border:1px solid rgba(255,255,255,.16);box-shadow:0 0 0 45px rgba(255,255,255,.035),0 0 0 90px rgba(255,255,255,.025)}.hero:after{width:360px;height:360px;right:16%;bottom:-280px;background:rgba(230,184,92,.17)}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:60px;position:relative;z-index:1}.eyebrow{display:inline-flex;align-items:center;gap:9px;text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:800;color:var(--gold)}.eyebrow:before{content:"";width:25px;height:2px;background:var(--gold)}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(40px,5.5vw,68px);line-height:1.05;letter-spacing:-.04em;margin:20px 0}.hero p{max-width:620px;color:#dce8df;font-size:18px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:750;font-size:14px;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}.btn-gold{background:var(--gold);color:#26351d}.btn-outline{border:1px solid rgba(255,255,255,.35);color:white}.hero-note{font-size:12px!important;color:#adc3b6!important;margin-top:22px}.hero-art{min-height:350px;position:relative;display:grid;place-items:center}.art-ring{width:min(330px,75vw);aspect-ratio:1;border:1px solid rgba(255,255,255,.24);border-radius:50%;display:grid;place-items:center;position:relative}.art-ring:before{content:"";position:absolute;inset:20px;border:1px dashed rgba(255,255,255,.3);border-radius:50%}.cross{font-size:105px;font-weight:200;line-height:1;color:var(--gold);text-shadow:0 12px 40px rgba(0,0,0,.2)}.art-caption{position:absolute;bottom:2px;right:4px;background:#f6f0df;color:var(--green);padding:14px 18px;border-radius:14px;font-weight:750;font-size:13px;box-shadow:var(--shadow)}.art-caption span{display:block;color:var(--muted);font-size:11px;font-weight:550}
+    .quickfacts{margin-top:-28px;position:relative;z-index:2}.facts{display:grid;grid-template-columns:repeat(3,1fr);background:white;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}.fact{padding:24px 28px;display:flex;align-items:center;gap:14px}.fact+.fact{border-left:1px solid var(--line)}.fact-icon{flex:0 0 44px;width:44px;height:44px;border-radius:13px;background:#edf3e9;display:grid;place-items:center;font-size:21px}.fact b{display:block;font-size:15px}.fact small{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+    section{padding:86px 0}.section-head{max-width:680px;margin-bottom:34px}.section-head .eyebrow{color:var(--green-2)}h2{font-size:clamp(29px,4vw,42px);line-height:1.15;letter-spacing:-.035em;margin:13px 0}.section-head p{color:var(--muted);margin-bottom:0}.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}.about-panel{background:#e9eee4;border-radius:22px;padding:30px;position:relative;overflow:hidden}.about-panel:after{content:"✝";position:absolute;right:12px;bottom:-54px;font-size:200px;line-height:1;color:rgba(18,59,45,.06)}.about-panel h3{font-size:21px;max-width:280px;position:relative;z-index:1}.about-panel p{color:var(--muted);position:relative;z-index:1}.tag{display:inline-block;background:white;border:1px solid var(--line);border-radius:99px;padding:6px 11px;font-size:11px;font-weight:750;color:var(--green-2)}.about-copy p{color:var(--muted)}.about-copy h3{margin:25px 0 8px;font-size:19px}.placeholder-note{padding:14px 16px;border-left:3px solid var(--gold);background:#fff9e9;border-radius:0 10px 10px 0;color:#685531;font-size:13px;margin-top:22px}
+    .levels{background:#eef1e9}.level-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.level-card{background:white;border:1px solid var(--line);border-radius:20px;padding:28px;position:relative;overflow:hidden}.level-card:after{content:"";position:absolute;width:145px;height:145px;right:-50px;top:-60px;border-radius:50%;background:#e8f0e5}.level-number{width:46px;height:46px;display:grid;place-items:center;border-radius:14px;background:var(--green);color:white;font-size:15px;font-weight:800;position:relative;z-index:1}.level-card h3{font-size:24px;margin:18px 0 8px}.level-card p{color:var(--muted);margin-bottom:0}.level-card small{display:block;margin-top:16px;color:#7b8b82;font-size:12px}
+    .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.gallery-item{min-height:210px;border:1px dashed #b8c7bb;border-radius:18px;background:linear-gradient(135deg,#e8eee3,#d7e4d5);display:flex;flex-direction:column;justify-content:flex-end;padding:20px;position:relative;overflow:hidden}.gallery-item:nth-child(2){background:linear-gradient(135deg,#f0e6cd,#e6d7af)}.gallery-item:nth-child(3){background:linear-gradient(135deg,#e8e5db,#d5dfd2)}.gallery-item:before{content:"＋";position:absolute;top:18px;right:18px;width:35px;height:35px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.65);color:var(--green);font-size:20px}.gallery-item strong{font-size:17px}.gallery-item span{font-size:12px;color:#5d7165;margin-top:4px}.gallery-help{font-size:13px;color:var(--muted);margin-top:18px}
+    .news{background:white}.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.news-card{border:1px solid var(--line);border-radius:18px;padding:24px}.news-symbol{width:42px;height:42px;display:grid;place-items:center;background:#edf3e9;border-radius:13px;font-size:20px;margin-bottom:20px}.news-card h3{font-size:18px;line-height:1.35;margin-bottom:8px}.news-card p{font-size:14px;color:var(--muted);margin-bottom:0}.status-label{display:inline-block;font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--red);font-weight:850;margin-bottom:10px}
+    .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px}.contact-copy p{color:var(--muted)}.contact-info{display:grid;gap:12px;margin-top:25px}.contact-row{display:flex;gap:13px;align-items:flex-start}.contact-icon{width:40px;height:40px;flex:0 0 40px;border-radius:12px;background:#e8eee3;display:grid;place-items:center}.contact-row b{display:block;font-size:14px}.contact-row span{display:block;color:var(--muted);font-size:13px}.contact-panel{background:var(--green);color:white;padding:30px;border-radius:22px}.contact-panel h3{font-size:23px}.contact-panel p{color:#d3e0d7;font-size:14px}.contact-panel label{font-size:12px;font-weight:750;display:block;margin:14px 0 6px}.contact-panel input,.contact-panel textarea{width:100%;font:inherit;color:var(--ink);background:#fff;border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:11px 12px;outline:none}.contact-panel textarea{resize:vertical;min-height:96px}.contact-panel button{border:0;cursor:pointer;margin-top:16px}.form-hint{font-size:11px!important;margin:10px 0 0!important;color:#b9cec0!important}
+    footer{background:#0c2c21;color:#d4e1d8;padding:30px 0}.footer-row{display:flex;justify-content:space-between;gap:20px;align-items:center}.footer-row strong{color:white}.footer-row p{margin:4px 0 0;font-size:12px;color:#9eb8a8}.footer-links{display:flex;gap:17px;flex-wrap:wrap}.footer-links a{font-size:12px;text-decoration:none;color:#c4d5cb}.footer-links a:hover{color:var(--gold)}
+    @media(max-width:800px){.nav-links{display:none;position:absolute;top:76px;left:0;right:0;background:var(--cream);padding:18px 22px 22px;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:15px}.nav-links.open{display:flex}.menu-btn{display:block}.hero{padding:65px 0 70px}.hero-grid{grid-template-columns:1fr;gap:18px}.hero-art{min-height:260px}.art-ring{width:240px}.cross{font-size:80px}.art-caption{right:calc(50% - 140px);bottom:-4px}.facts{grid-template-columns:1fr}.fact{padding:17px 22px}.fact+.fact{border-left:0;border-top:1px solid var(--line)}section{padding:65px 0}.about-grid,.contact-grid{grid-template-columns:1fr;gap:25px}.gallery-grid{grid-template-columns:1fr 1fr}.news-grid{grid-template-columns:1fr}.footer-row{align-items:flex-start;flex-direction:column}}
+    @media(max-width:520px){.container{width:min(100% - 28px,1120px)}.brand strong{font-size:13px}.brand small{font-size:11px}.hero p{font-size:16px}.hero-art{min-height:230px}.level-grid,.gallery-grid{grid-template-columns:1fr}.gallery-item{min-height:180px}.level-card{padding:24px}.contact-panel{padding:23px}}
+  </style>
+</head>
+<body>
+  <div class="topline"></div>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#beranda" aria-label="Sekolah Kristen Yahukimo, halaman beranda">
+        <span class="brand-mark" aria-hidden="true">✝</span>
+        <span><strong>Sekolah Kristen Yahukimo</strong><small>Jenjang SMP &amp; SMA</small></span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Navigasi utama">
+        <a href="#profil">Profil</a><a href="#jenjang">SMP &amp; SMA</a><a href="#galeri">Galeri</a><a href="#berita">Berita</a><a href="#kontak">Kontak</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn" aria-label="Buka menu navigasi" aria-expanded="false">☰</button>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="beranda">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Iman · Ilmu · Pengabdian</span>
+          <h1>Bertumbuh dalam iman, belajar untuk masa depan.</h1>
+          <p>Selamat datang di website profil Sekolah Kristen Yahukimo. Ruang informasi untuk mengenal jenjang SMP dan SMA, kegiatan sekolah, serta kabar terbaru dari lingkungan sekolah.</p>
+          <div class="hero-actions"><a class="btn btn-gold" href="#profil">Kenali Sekolah <span aria-hidden="true">↗</span></a><a class="btn btn-outline" href="#kontak">Informasi Kontak</a></div>
+          <p class="hero-note">Website profil — informasi resmi sekolah akan dilengkapi oleh pengelola.</p>
+        </div>
+        <div class="hero-art" aria-hidden="true"><div class="art-ring"><span class="cross">✝</span></div><div class="art-caption">Sekolah Kristen Yahukimo<span>SMP · SMA</span></div></div>
+      </div>
+    </section>
+    <div class="container quickfacts"><div class="facts">
+      <div class="fact"><span class="fact-icon" aria-hidden="true">📘</span><div><b>Jenjang SMP</b><small>Informasi pendidikan tingkat menengah pertama</small></div></div>
+      <div class="fact"><span class="fact-icon" aria-hidden="true">🎓</span><div><b>Jenjang SMA</b><small>Informasi pendidikan tingkat menengah atas</small></div></div>
+      <div class="fact"><span class="fact-icon" aria-hidden="true">🌿</span><div><b>Iman dan karakter</b><small>Nilai yang dapat dijelaskan melalui profil resmi sekolah</small></div></div>
+    </div></div>
+    <section id="profil">
+      <div class="container about-grid">
+        <div class="about-panel"><span class="tag">PROFIL SEKOLAH</span><h3>Mengenal Sekolah Kristen Yahukimo</h3><p>Halaman ini disiapkan sebagai tempat untuk memuat identitas, sejarah, visi, misi, dan informasi pendidikan sekolah.</p></div>
+        <div class="about-copy"><div class="section-head"><span class="eyebrow">Tentang Kami</span><h2>Informasi sekolah yang jelas dan tepercaya.</h2><p>Website ini membantu orang tua, peserta didik, alumni, dan masyarakat menemukan informasi sekolah dalam satu tempat.</p></div>
+          <h3>Visi dan misi</h3><p>Tambahkan visi dan misi sesuai dokumen resmi sekolah agar informasi yang diterbitkan akurat.</p>
+          <h3>Sejarah sekolah</h3><p>Tambahkan tahun berdiri, pendiri, pengelola, serta perkembangan sekolah berdasarkan sumber atau arsip resmi.</p>
+          <div class="placeholder-note"><strong>Catatan pengelola:</strong> Nama resmi lengkap, alamat, sejarah, visi-misi, nama pimpinan, dan data akreditasi belum dimasukkan karena perlu dikonfirmasi dari sumber sekolah.</div>
+        </div>
+      </div>
+    </section>
+    <section class="levels" id="jenjang">
+      <div class="container"><div class="section-head"><span class="eyebrow">Layanan Pendidikan</span><h2>Jenjang pendidikan</h2><p>Informasi dasar untuk dua jenjang yang menjadi fokus website ini.</p></div>
+        <div class="level-grid">
+          <article class="level-card"><span class="level-number">01</span><h3>SMP</h3><p>Bagian ini dapat memuat profil jenjang SMP, informasi penerimaan peserta didik, kegiatan belajar, dan informasi akademik.</p><small>Isi nama resmi unit SMP dan informasi terverifikasi di sini.</small></article>
+          <article class="level-card"><span class="level-number">02</span><h3>SMA</h3><p>Bagian ini dapat memuat profil jenjang SMA, program pembelajaran, informasi penerimaan peserta didik, dan kegiatan sekolah.</p><small>Isi nama resmi unit SMA dan informasi terverifikasi di sini.</small></article>
+        </div>
+      </div>
+    </section>
+    <section id="galeri">
+      <div class="container"><div class="section-head"><span class="eyebrow">Dokumentasi</span><h2>Galeri kegiatan sekolah</h2><p>Tambahkan foto asli yang telah mendapat izin untuk dipublikasikan.</p></div>
+        <div class="gallery-grid">
+          <div class="gallery-item"><strong>Kegiatan belajar</strong><span>Ganti kotak ini dengan foto kegiatan yang terverifikasi.</span></div>
+          <div class="gallery-item"><strong>Ibadah dan pembinaan</strong><span>Tambahkan dokumentasi resmi jika tersedia.</span></div>
+          <div class="gallery-item"><strong>Kegiatan siswa</strong><span>Gunakan foto sekolah yang sesuai dan memiliki izin.</span></div>
+        </div><p class="gallery-help">Cara mengganti dengan foto: unggah gambar ke folder <code>assets</code>, lalu ubah kotak galeri menjadi elemen gambar dengan sumber, misalnya <code>assets/kegiatan-sekolah.jpg</code>.</p>
+      </div>
+    </section>
+    <section class="news" id="berita">
+      <div class="container"><div class="section-head"><span class="eyebrow">Kabar Sekolah</span><h2>Berita dan pengumuman</h2><p>Bagian ini dapat digunakan untuk mengumumkan kegiatan, kalender sekolah, penerimaan siswa, dan informasi resmi lainnya.</p></div>
+        <div class="news-grid">
+          <article class="news-card"><span class="news-symbol" aria-hidden="true">📰</span><span class="status-label">Templat berita</span><h3>Judul berita sekolah</h3><p>Ganti bagian ini dengan berita yang sudah dikonfirmasi, termasuk tanggal, isi kegiatan, dan dokumentasi bila ada.</p></article>
+          <article class="news-card"><span class="news-symbol" aria-hidden="true">📅</span><span class="status-label">Templat pengumuman</span><h3>Informasi atau agenda sekolah</h3><p>Masukkan tanggal, waktu, dan keterangan kegiatan berdasarkan pengumuman resmi sekolah.</p></article>
+          <article class="news-card"><span class="news-symbol" aria-hidden="true">🎒</span><span class="status-label">Templat penerimaan</span><h3>Informasi penerimaan siswa</h3><p>Lengkapi jadwal, persyaratan, biaya jika berlaku, dan kontak panitia sebelum diterbitkan.</p></article>
+        </div>
+      </div>
+    </section>
+    <section id="kontak">
+      <div class="container contact-grid">
+        <div class="contact-copy"><div class="section-head"><span class="eyebrow">Hubungi Kami</span><h2>Kontak sekolah</h2><p>Lengkapi informasi di bawah ini dengan kontak resmi agar masyarakat dapat menghubungi pihak sekolah.</p></div>
+          <div class="contact-info">
+            <div class="contact-row"><span class="contact-icon" aria-hidden="true">📍</span><div><b>Alamat</b><span>[Masukkan alamat resmi sekolah]</span></div></div>
+            <div class="contact-row"><span class="contact-icon" aria-hidden="true">☎</span><div><b>Telepon / WhatsApp</b><span>[Masukkan nomor kontak resmi]</span></div></div>
+            <div class="contact-row"><span class="contact-icon" aria-hidden="true">✉</span><div><b>Email</b><span>[Masukkan email resmi jika tersedia]</span></div></div>
+          </div>
+        </div>
+        <div class="contact-panel"><h3>Kirim pesan</h3><p>Formulir ini merupakan contoh tampilan. Untuk mengirim pesan sungguhan, hubungkan formulir dengan layanan formulir atau backend.</p>
+          <form id="contactForm"><label for="nama">Nama</label><input id="nama" name="nama" autocomplete="name" placeholder="Nama Anda" required><label for="pesan">Pesan</label><textarea id="pesan" name="pesan" placeholder="Tulis pesan atau pertanyaan" required></textarea><button class="btn btn-gold" type="submit">Siapkan pesan ↗</button><p class="form-hint" id="formHint">Tombol akan membuka aplikasi email jika tersedia; tidak ada data yang disimpan oleh website ini.</p></form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container footer-row"><div><strong>Sekolah Kristen Yahukimo</strong><p>Website profil jenjang SMP &amp; SMA · <span id="year"></span></p></div><div class="footer-links"><a href="#profil">Profil</a><a href="#galeri">Galeri</a><a href="#berita">Berita</a><a href="#kontak">Kontak</a></div></div></footer>
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(open));
+      menuBtn.textContent = open ? '✕' : '☰';
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false'); menuBtn.textContent='☰';
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('contactForm').addEventListener('submit', event => {
+      event.preventDefault();
+      const nama = document.getElementById('nama').value.trim();
+      const pesan = document.getElementById('pesan').value.trim();
+      const subject = encodeURIComponent('Pesan untuk Sekolah Kristen Yahukimo');
+      const body = encodeURIComponent('Nama: ' + nama + '\n\nPesan:\n' + pesan);
+      const email = ''; // Isi email resmi sekolah di sini, misalnya: 'sekolah@example.org'
+      if (!email) {
+        document.getElementById('formHint').textContent = 'Formulir belum dapat mengirim pesan karena email resmi sekolah belum diisi di kode. Silakan isi alamat email pada variabel email di index.html.';
+        return;
+      }
+      window.location.href = 'mailto:' + email + '?subject=' + subject + '&body=' + body;
+    });
+  </script>
+</body>
+</html>
